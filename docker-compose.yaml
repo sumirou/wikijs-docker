@@ -7,8 +7,7 @@ services:
       - wikijs-data:/data
     ports:
       - 3000:3000
-    restart:
-      - unless-stopped
+    restart: unless-stopped
     environment:
       TZ: Japan
       PUID: 1000
@@ -24,8 +23,7 @@ services:
     image: postgres:16
     container_name: wikijs-postgres
     shm_size: 128mb
-    restart:
-      - unless-stopped
+    restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
