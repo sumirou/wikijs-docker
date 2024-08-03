@@ -1,6 +1,7 @@
 # 建て方
 
 ```
+vim .env # edit environment variables
 docker compose
 ```
 
