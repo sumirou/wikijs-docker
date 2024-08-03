@@ -32,7 +32,7 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
   pgadmin:
-    image: dpage/pgadmin4:8.10
+    image: dpage/pgadmin4:7.17.23
     container_name: wikijs-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
