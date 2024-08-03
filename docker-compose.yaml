@@ -16,7 +16,7 @@ services:
       DB_TYPE: postgres
       DB_HOST: postgres
       DB_USER: wikijs
-      DB_PASS: ${WIKIJS_DB_PATH}
+      DB_PASS: ${WIKIJS_DB_PASS}
       DB_NAME: wikijs
     depends_on:
       - wikijs-postgres
