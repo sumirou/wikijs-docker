@@ -49,6 +49,7 @@ services:
     container_name: wikijs-es
     environment:
       discovery.type: single-node
+    command: [ "/bin/sh", "-c", "./bin/elasticsearch-plugin install analysis-kuromoji && ./bin/elasticsearch-plugin install analysis-icu && /usr/local/bin/docker-entrypoint.sh" ]
 volumes:
   wikijs-config:
   wikijs-data:
