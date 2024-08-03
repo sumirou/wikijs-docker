@@ -4,7 +4,7 @@
             "Name": "wikijs",
             "Group": "wikijs",
             "Port": 5432,
-            "Username": "postgres",
+            "Username": "wikijs",
             "Host": "postgres",
             "SSLMode": "prefer",
             "MaintenanceDB": "wikijs"
