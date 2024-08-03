@@ -18,7 +18,7 @@ services:
       DB_PASS: ${WIKIJS_DB_PASS}
       DB_NAME: wikijs
     depends_on:
-      - wikijs-postgres
+      - postgres
   postgres:
     image: postgres:16
     container_name: wikijs-postgres
@@ -37,7 +37,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     depends_on:
-      - wikijs-postgres
+      - postgres
     ports:
       - 5050:80
     volumes:
