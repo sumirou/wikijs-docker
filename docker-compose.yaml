@@ -45,13 +45,19 @@ services:
       - pgadmin-data:/var/lib/pgadmin
       - ./pgadmin-config.json:/pgadmin4/servers.json
   elastic:
+    build:
+      context: ./es/
+      dockerfile: Dockerfile
     image: elasticsearch:7.17.23
     container_name: wikijs-es
     environment:
       discovery.type: single-node
-    command: [ "/bin/sh", "-c", "./bin/elasticsearch-plugin install analysis-kuromoji && ./bin/elasticsearch-plugin install analysis-icu && /usr/local/bin/docker-entrypoint.sh" ]
+      ES_JAVA_OPTS: -Xms1g -Xmx1g
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
 volumes:
   wikijs-config:
   wikijs-data:
   postgres-data:
   pgadmin-data:
+  esdata:
