@@ -1,4 +1,4 @@
-FROM elasticsearch:7.17.23
+FROM elasticsearch:9.3.4
 
 RUN if ./bin/elasticsearch-plugin list | grep -q analysis-kuromoji; then \
     ./bin/elasticsearch-plugin remove analysis-kuromoji; \
