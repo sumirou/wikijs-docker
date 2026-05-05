@@ -48,7 +48,6 @@ services:
     build:
       context: ./es/
       dockerfile: Dockerfile
-    image: elasticsearch:7.17.23
     container_name: wikijs-es
     environment:
       discovery.type: single-node
